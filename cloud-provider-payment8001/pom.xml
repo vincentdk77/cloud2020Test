@@ -12,13 +12,19 @@
     <artifactId>cloud-provider-payment8001</artifactId>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-eureka-server -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
+        <!-- actuator这个包，后面swagger、豪猪哥都要用到-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
@@ -35,6 +41,7 @@
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
             <version>1.1.10</version>
+            <!--如果没写版本,从父层面找,找到了就直接用,全局统一-->
         </dependency>
         <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
         <dependency>
