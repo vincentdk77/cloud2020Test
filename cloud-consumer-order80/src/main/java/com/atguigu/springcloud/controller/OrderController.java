@@ -18,6 +18,7 @@ public class OrderController {
     @Resource
     private RestTemplate restTemplate;
 
+    // TODO: 2020/9/22 这里可以使用get方式来做 
     @GetMapping("/consumer/payment/create")
     public CommonResult<Payment> create(Payment payment){
         log.info("待创建的数据：1234"+payment.toString());

@@ -45,6 +45,12 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <artifactId>cloud-api-commons</artifactId>
+            <groupId>com.atguigu.springcloud</groupId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 
 
