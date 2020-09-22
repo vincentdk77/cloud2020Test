@@ -13,7 +13,7 @@ import javax.annotation.Resource;
 @RestController
 @Slf4j
 public class OrderController {
-    public static final String PAYMENT_URL = "http://localhost:8001";
+    public static final String PAYMENT_URL = "http://cloud-payment-service";
 
     @Resource
     private RestTemplate restTemplate;
@@ -21,13 +21,13 @@ public class OrderController {
     // TODO: 2020/9/22 这里可以使用get方式来做 
     @GetMapping("/consumer/payment/create")
     public CommonResult<Payment> create(Payment payment){
-        log.info("待创建的数据：1234"+payment.toString());
+        log.info("待创建的数据："+payment.toString());
         return restTemplate.postForObject(PAYMENT_URL+"/payment/create",payment,CommonResult.class);
     }
 
     @GetMapping("/consumer/payment/get/{id}")
     public CommonResult<Payment> getPayment(@PathVariable("id") Long id){
-        log.info("查询的id123="+id.toString());
+        log.info("查询的id="+id.toString());
         return restTemplate.getForObject(PAYMENT_URL+"/payment/get/"+id,CommonResult.class);
     }
 
