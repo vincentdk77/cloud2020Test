@@ -6,8 +6,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-public class ConsumerZkMain80 {
+public class ConsumerZkMain84 {
     public static void main(String[] args) {
-        SpringApplication.run(ConsumerZkMain80.class,args);
+        SpringApplication.run(ConsumerZkMain84.class,args);
     }
 }

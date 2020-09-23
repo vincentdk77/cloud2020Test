@@ -10,13 +10,14 @@ import javax.annotation.Resource;
 @RestController
 @Slf4j
 public class ConsumerControler {
-    public static final String INVOME_URL = "http://cloud-payment-service";
+    public static final String INVOME_URL = "http://cloud-paymentZk-service";
 
     @Resource
     private RestTemplate restTemplate;
 
     @GetMapping("/consumer/payment/zk")
     public String payment (){
+        log.info("consumerZk..");
         return restTemplate.getForObject(INVOME_URL+"/payment/zk",String.class);
     }
 
