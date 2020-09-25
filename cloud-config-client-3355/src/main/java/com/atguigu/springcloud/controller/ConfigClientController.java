@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @Slf4j
+//todo 由于没有加入springcloud bus总线，这里只能实现手动动态刷新
 @RefreshScope
 public class ConfigClientController {
     // 因为config仓库以rest形式暴露，所以所有客户端都可以通过config服务端访问到github上对应的文件信息
