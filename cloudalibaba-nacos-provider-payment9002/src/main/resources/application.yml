@@ -1,5 +1,5 @@
 server:
-  port: 9001
+  port: 9002
 
 spring:
   application:
@@ -9,7 +9,6 @@ spring:
       discovery:
 #        server-addr: localhost:8848 #配置Nacos地址
         server-addr: dk100:1111 #配置Nacos地址
-
 management:
   endpoints:
     web:
