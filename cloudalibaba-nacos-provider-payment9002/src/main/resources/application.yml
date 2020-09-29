@@ -8,7 +8,7 @@ spring:
     nacos:
       discovery:
 #        server-addr: localhost:8848 #配置Nacos地址
-        server-addr: dk100:1111 #配置Nacos地址
+        server-addr: dk100:1111 #配置Nacos集群地址，nginx映射
 management:
   endpoints:
     web:

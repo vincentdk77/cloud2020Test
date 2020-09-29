@@ -7,11 +7,11 @@ spring:
   cloud:
     nacos:
       discovery:
-#        server-addr: localhost:8848 #服务注册中心地址
-        server-addr: dk100:1111 #服务注册中心地址
+#        server-addr: localhost:8848 #服务注册中心单机地址
+        server-addr: dk100:1111 #配置Nacos集群地址，nginx映射
       config:
-#        server-addr: localhost:8848 #配置中心地址
-        server-addr: dk100:1111 #服务注册中心地址
+#        server-addr: localhost:8848 #配置中心单机地址
+        server-addr: dk100:1111 #配置Nacos集群地址，nginx映射
         file-extension: yaml #指定yaml格式的配置
         namespace: 1ac43075-484d-4dd0-8358-53e90d7d6466
         group: TEST_GROUP
