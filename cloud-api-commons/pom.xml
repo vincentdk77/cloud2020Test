@@ -17,7 +17,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
-            <optional>true</optional>
+            <optional>true</optional><!--当其他项目继承本项目时，<optional>true</optional>，表示当前依赖不向下传递。-->
         </dependency>
 
         <dependency>
